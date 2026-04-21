@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.N.M. Memorial Educational Foundation</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #0d9488;
+            --primary-dark: #0f766e;
+            --secondary: #f0fdfa;
+            --accent: #4ade80;
+            --text: #1f2937;
+            --light: #f9fafb;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.6; color: var(--text); background-color: white; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { padding: 20px 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .hero { padding: 100px 0; background: linear-gradient(135deg, var(--secondary) 0%, #ffffff 100%); text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; color: var(--primary-dark); }
+        .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 30px; opacity: 0.9; }
+        .btn { display: inline-block; padding: 12px 30px; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); background: var(--primary-dark); }
+
+        section { padding: 80px 0; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 10px; }
+        .section-title p { color: #6b7280; font-size: 1.1rem; }
+
+        .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .impact-card { padding: 40px; background: var(--light); border-radius: 12px; border-bottom: 4px solid var(--primary); transition: transform 0.3s; }
+        .impact-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .impact-card i { color: var(--primary); margin-bottom: 20px; }
+        .impact-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+
+        .about { background: var(--secondary); border-radius: 20px; padding: 60px; }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        @media (max-width: 768px) { .about-content { grid-template-columns: 1fr; } .hero h1 { font-size: 2.5rem; } }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .gallery-item { aspect-ratio: 4/3; background: #e5e7eb; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .gallery-item span { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: white; padding: 10px; font-size: 0.9rem; text-align: center; }
+
+        .contact-info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; }
+        .contact-item { display: flex; gap: 15px; margin-bottom: 25px; }
+        .contact-item i { color: var(--primary); flex-shrink: 0; }
+        
+        footer { padding: 40px 0; background: var(--primary-dark); color: white; text-align: center; }
+        footer p { opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">S.N.M. FOUNDATION</a>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#impact">Impact</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Empowering Communities for a Sustainable Future</h1>
+            <p>S.N.M. Memorial Educational Foundation is dedicated to socio-economic development, social justice, and health awareness in Jharkhand. We work with tribal and backward communities to create lasting change.</p>
+            <a href="#impact" class="btn">Our Impact</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="about">
+            <div class="about-content">
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--primary-dark);">About the Foundation</h2>
+                    <p>Founded by social leaders and educationists, we focus on rural and urban development in Jharkhand. Our core mission is to provide opportunities for health awareness, education, and women’s empowerment to those who need it most.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800" alt="About Us" style="width: 100%; border-radius: 12px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="container">
+        <div class="section-title">
+            <h2>Our Core Focus Areas</h2>
+            <p>Creating sustainable impact through targeted initiatives</p>
+        </div>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <i data-lucide="graduation-cap" size="40"></i>
+                <h3>Education</h3>
+                <p>Establishing schools, providing computer training, and offering scholarships to needy students in rural areas.</p>
+            </div>
+            <div class="impact-card">
+                <i data-lucide="heart-pulse" size="40"></i>
+                <h3>Health Awareness</h3>
+                <p>Organizing medical camps, HIV/AIDS awareness programs, and providing aids for the disabled.</p>
+            </div>
+            <div class="impact-card">
+                <i data-lucide="users-round" size="40"></i>
+                <h3>Women Empowerment</h3>
+                <p>Developing SHGs and providing vocational training like sewing and handicrafts for self-reliance.</p>
+            </div>
+            <div class="impact-card">
+                <i data-lucide="leaf" size="40"></i>
+                <h3>Environment</h3>
+                <p>Conducting tree plantation drives and environmental awareness programs to protect our forests.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="container" style="background: var(--light); border-radius: 20px; padding: 60px;">
+        <div class="section-title">
+            <h2>Visualizing Our Impact</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <i data-lucide="monitor" size="40" color="#9ca3af"></i>
+                <span>Computer Training Lab</span>
+            </div>
+            <div class="gallery-item">
+                <i data-lucide="stethoscope" size="40" color="#9ca3af"></i>
+                <span>Health Checkup Camp</span>
+            </div>
+            <div class="gallery-item">
+                <i data-lucide="sprout" size="40" color="#9ca3af"></i>
+                <span>Tree Plantation Drive</span>
+            </div>
+            <div class="gallery-item">
+                <i data-lucide="music" size="40" color="#9ca3af"></i>
+                <span>Cultural Program</span>
+            </div>
+            <div class="gallery-item">
+                <i data-lucide="scissors" size="40" color="#9ca3af"></i>
+                <span>Sewing & Craft Training</span>
+            </div>
+            <div class="gallery-item">
+                <i data-lucide="megaphone" size="40" color="#9ca3af"></i>
+                <span>Awareness Campaign</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Reach out to us to support our cause or learn more</p>
+        </div>
+        <div class="contact-info">
+            <div>
+                <div class="contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <div>
+                        <strong>Main Office</strong><br>
+                        374 B, Ashok Nagar, Road no-4,<br>
+                        Argora, Ranchi, Jharkhand - 834002
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="phone"></i>
+                    <div>
+                        <strong>Contact Numbers</strong><br>
+                        +91 9334848455, +91 903134400
+                    </div>
+                </div>
+            </div>
+            <div style="background: var(--secondary); padding: 30px; border-radius: 12px; text-align: center;">
+                <p>S.N.M. Memorial Educational Foundation is a registered trust committed to social welfare since 2010.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 S.N.M. Memorial Educational Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
